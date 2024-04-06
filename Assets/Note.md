@@ -42,7 +42,7 @@ Scale: 0.5 0.5 1;
 > TileMap
 
 
-# MoveMent
+# Movement
 
 新建空游戏对象 Player
 
@@ -90,3 +90,13 @@ Sprite Renderer:
 附加 TankController.cs 到 Tank 游戏对象
 
 Tank 游戏对象附加给 Player 游戏对象的事件序列化字段 
+
+# Adding acceleration (加速度) to player movement
+
+新建脚本 TankMove.cs AimTurret.cs Turret.cs
+
+游戏对象 TankBase 附加脚本 TankMove.cs
+
+游戏对象 TankTurretParent 附加脚本 AimTurret.cs
+
+游戏对象 TankTurret 附加脚本 Turret.cs

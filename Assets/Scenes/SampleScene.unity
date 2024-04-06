@@ -11139,11 +11139,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb9dde9a68ec7c46bac5d6273d79f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 1653338430}
-  maxSpeed: 70
-  rotationSpeed: 200
-  turretRotationSpeed: 150
-  turretParent: {fileID: 2145130000}
+  playerInput: {fileID: 1565061090}
+  tanMove: {fileID: 1701956085}
+  aimTurret: {fileID: 2145130001}
+  turrets:
+  - {fileID: 1680998131}
 --- !u!50 &1653338430
 Rigidbody2D:
   serializedVersion: 4
@@ -11208,6 +11208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680998129}
   - component: {fileID: 1680998130}
+  - component: {fileID: 1680998131}
   m_Layer: 0
   m_Name: TankTurret
   m_TagString: Untagged
@@ -11282,6 +11283,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1680998131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680998128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4d6751293e431991a61b5967e97fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1701956082
 GameObject:
   m_ObjectHideFlags: 0
@@ -11292,6 +11305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701956083}
   - component: {fileID: 1701956084}
+  - component: {fileID: 1701956085}
   m_Layer: 0
   m_Name: TankBase
   m_TagString: Untagged
@@ -11366,6 +11380,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1701956085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701956082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e1dc238da34f20b06f16c73b3c31b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 1653338430}
+  maxSpeed: 70
+  rotationSpeed: 200
+  acceleration: 70
+  deacceleration: 50
+  currentSpeed: 0
+  currentForewardDirection: 1
 --- !u!1 &2077353332
 GameObject:
   m_ObjectHideFlags: 0
@@ -11983,6 +12016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2145130000}
+  - component: {fileID: 2145130001}
   m_Layer: 0
   m_Name: TankTurretParent
   m_TagString: Untagged
@@ -12006,3 +12040,16 @@ Transform:
   m_Father: {fileID: 1653338432}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 472}
+--- !u!114 &2145130001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145129999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008ce0b34a2f49729c058fa903153165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretRotationSpeed: 150
