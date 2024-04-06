@@ -38,3 +38,55 @@ Scale: 0.5 0.5 1;
 `Used By Composite: true`、`Body Type: Static`
 
 搭建场景
+
+> TileMap
+
+
+# MoveMent
+
+新建空游戏对象 Player
+
+Player 新建子对象 Tank
+
+Tank 新建子对象 TankBase 添加组件 Sprite Renderer
+```yml
+Sprite Renderer:
+    Sprite: tankBody_green
+    SortingLayer: Player
+```
+
+新建文件夹 Assets/Scripts
+
+新建脚本 PlayerInput.cs 附加给 Player 游戏对象
+
+> Sprite Renderer  
+
+> UnityEvent
+
+
+游戏对象 Tank 添加组件 Rigidbody 2D、Capsule Collider 2D 调整参数
+
+游戏对象 Tank 新建子对象 TankTurretParent
+
+TankTurretParent 新建子对象 TankTurret
+
+TankTurret 添加组件 Sprite Renderer
+
+```yml
+Sprite Renderer:
+    Sprite: tankBlue_bareel1
+    Flip: Y
+    SortingLayer: Player
+```
+
+调整位置 TankTurretParent TankTurret
+
+新建脚本 TankController.cs
+
+> 输入的获取在输入类（能力）Update 获取，行为在处理类（游戏实体）FixedUpdate 中处理
+
+> 控制（数据）与行为（业务）分离
+
+附加 TankController.cs 到 Tank 游戏对象
+
+Tank 游戏对象附加给 Player 游戏对象的事件序列化字段 
