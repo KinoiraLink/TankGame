@@ -7,11 +7,13 @@ using UnityEngine.Events;
 public class Damagable : MonoBehaviour
 {
     public int MaxHealth = 100;
+    [SerializeField] private int health;
+    
     public UnityEvent OnDead;
     public UnityEvent<float> OnHealthChange;
     public UnityEvent OnHit, OnHeal;
     
-    [SerializeField] private int health;
+
     public int Health
     {
         get => health;

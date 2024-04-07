@@ -126,3 +126,14 @@ Tank 游戏对象附加给 Player 游戏对象的事件序列化字段
 设置碰撞矩阵
 > 碰撞作用矩阵
 
+# Object Pooling Pattern
+
+> Object Pooling Pattern
+
+新建脚本 ObjectPool.cs 附加给游戏对象 TankTurret
+
+新建脚本 DestoryUtil.cs 附加给游戏对象 Tank
+
+新建脚本 DestroyIfDisabled.cs 
+
+修改脚本 Turret.cs 添加对象池组件

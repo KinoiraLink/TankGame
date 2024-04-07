@@ -11073,28 +11073,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
-      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1474672843}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1474672837}
+      objectReference: {fileID: 1474672844}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: DestroyHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TankController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: DestroyUtil, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+      propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -11107,6 +11135,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1330145623981176582, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
   m_PrefabInstance: {fileID: 1350324350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1474672843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1330145623981176583, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
+  m_PrefabInstance: {fileID: 1350324350}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474672837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb9dde9a68ec7c46bac5d6273d79f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1474672844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474672837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb4a2fa4570e143bf4d61471fd7ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1565061089
 GameObject:
   m_ObjectHideFlags: 0
