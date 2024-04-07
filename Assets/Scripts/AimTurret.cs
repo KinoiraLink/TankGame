@@ -17,7 +17,7 @@ public class AimTurret : MonoBehaviour
         //转向
         this.transform.rotation = Quaternion.RotateTowards(
             this.transform.rotation,//现在的朝向
-            Quaternion.Euler(0,0,desiredAngle-90),//旋转的角度
+            Quaternion.Euler(0,0,desiredAngle),//旋转的角度
             rotationStep//平滑
             );        
     }

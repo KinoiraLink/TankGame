@@ -17,13 +17,13 @@ public class TankController : MonoBehaviour
     
     private void Awake()
     {
-        if (playerInput == null)
+        /*if (playerInput == null)
         {
             playerInput = GetComponentInParent<PlayerInput>();
             playerInput.OnMoveBody.AddListener(HandleMoveBody);
             playerInput.OnMoveTurret.AddListener(HandleTurretMovement);
             playerInput.OnShoot.AddListener(HandleShoot);
-        }
+        }*/
         if (tanMove == null)
             tanMove = GetComponentInChildren<TankMove>();
         if (aimTurret == null)
@@ -32,12 +32,12 @@ public class TankController : MonoBehaviour
             turrets = GetComponentsInChildren<Turret>();
     }
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         playerInput.OnMoveBody.RemoveListener(HandleMoveBody);
         playerInput.OnMoveTurret.RemoveListener(HandleTurretMovement);
         playerInput.OnShoot.RemoveListener(HandleShoot);
-    }
+    }*/
 
 
     public void HandleShoot()
