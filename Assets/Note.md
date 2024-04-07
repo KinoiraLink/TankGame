@@ -170,3 +170,26 @@ CTRLD PlayerTankMovmentData BoostTankMovementData
 
 新建 SO
 
+# AI Detecting Player
+
+新建文件夹 Assets/Scripts/AI
+
+新建脚本 AIDetector.cs
+
+> OverlapCircle
+
+新建空游戏对象 StaticEnemy 重置
+
+（暂时）将敌方 Tank 设为 StaticEnemy 子游戏对象
+
+敌方 Tank 新建子对象 AIDetector 附加脚本
+
+新建 Layer
+```yml
+10 : Player
+11 : Enemy
+```
+
+设置碰撞矩阵
+`Queries Start In Colliders: false`
+> Queries Start In Colliders 射线是否检测自身内部，检测视线能够被遮挡
