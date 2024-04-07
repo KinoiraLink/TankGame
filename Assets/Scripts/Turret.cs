@@ -9,8 +9,8 @@ using Object = System.Object;
 public class Turret : MonoBehaviour
 {
     public List<Transform> turretBarrels;
-    public GameObject bulletPrefab;
-    public float reloadDelay = 1;
+
+    public TurretData turretData;
 
     private bool canShoot = true;
     private Collider2D[] tankColliders;//确保自身与子弹不会发生碰撞
@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        bulletPool.Initialize(bulletPrefab,bulletPoolCount);
+        bulletPool.Initialize(turretData.bulletPrefab,bulletPoolCount);
     }
 
     private void Update()
@@ -46,7 +46,7 @@ public class Turret : MonoBehaviour
         if (canShoot)
         {
             canShoot = false;
-            currentDelay = reloadDelay;
+            currentDelay = turretData.reloadDelay;
 
             foreach (var barrel in turretBarrels)
             {
@@ -54,7 +54,7 @@ public class Turret : MonoBehaviour
                 GameObject bullet = bulletPool.CreateObject();
                 bullet.transform.position = barrel.position;
                 bullet.transform.localRotation = barrel.rotation;
-                bullet.GetComponent<Bullet>().Initialize();
+                bullet.GetComponent<Bullet>().Initialize(turretData.bulletData);
                 foreach (Collider2D collider in tankColliders)
                 {
                     Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(),collider);

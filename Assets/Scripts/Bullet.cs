@@ -1,14 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10f;
-    public int damage = 5;
-    public float maxDistance = 10f;
-
+    public BulletData bulletData;
     private Vector2 startPosition;
     private float conquaredDistance = 0;
     private Rigidbody2D rb2d;
@@ -18,16 +16,16 @@ public class Bullet : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Initialize()
+    public void Initialize(BulletData bulletData)
     {
         startPosition = transform.position;
-        rb2d.velocity = transform.up * speed;
+        rb2d.velocity = transform.up * bulletData.speed;
     }
 
     private void Update()
     {
         conquaredDistance = Vector2.Distance(transform.position, startPosition);
-        if (conquaredDistance >= maxDistance)
+        if (conquaredDistance >= bulletData.maxDistance)
         {
             DisableObject();
         }
@@ -46,7 +44,7 @@ public class Bullet : MonoBehaviour
         var damagable = other.GetComponent<Damagable>();
         if (damagable != null)
         {
-            damagable.Hit(damage);
+            damagable.Hit(bulletData.damage);
         }
         
         DisableObject();

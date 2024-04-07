@@ -137,3 +137,36 @@ Tank 游戏对象附加给 Player 游戏对象的事件序列化字段
 新建脚本 DestroyIfDisabled.cs 
 
 修改脚本 Turret.cs 添加对象池组件
+
+# Using Scriptable Objects
+
+新建文件夹 Assets/Scripts/DataSO
+
+新建脚本 TankMovementData
+
+新建文件夹 Assets/Data/TankData
+
+新建 SO PlayerTankMovmentData
+
+修改脚本 TankMove.cs 使用 TankMovementData
+
+CTRLD PlayerTankMovmentData EnemyTankMovmentData
+
+CTRLD PlayerTankMovmentData BoostTankMovementData
+
+> 与序列化字段不同，运行时的数据可以保存
+
+新建脚本 BulletData.cs 
+
+新建脚本 TurretData.cs
+
+修改脚本 Bullet.cs 
+
+修改脚本 Turret.cs
+
+新建文件夹 Assets/Data/BulletData
+
+新建文件夹 Assets/Data/TurretData
+
+新建 SO
+

@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 100
+  health: 0
   OnDead:
     m_PersistentCalls:
       m_Calls: []
@@ -116,7 +117,6 @@ MonoBehaviour:
   OnHeal:
     m_PersistentCalls:
       m_Calls: []
-  health: 0
 --- !u!1 &1330145624070961354
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,8 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretBarrels:
   - {fileID: 1330145624466036255}
-  bulletPrefab: {fileID: 1655286283886681707, guid: dc29cff5ecfbbbc4d80ad976175f56a0, type: 3}
-  reloadDelay: 1
+  turretData: {fileID: 11400000, guid: 262cbdbb3bac3b446bfc097c5236bcb6, type: 2}
+  bulletPoolCount: 10
 --- !u!114 &7908035193642035630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,10 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1330145623981176580}
-  maxSpeed: 70
-  rotationSpeed: 200
-  acceleration: 70
-  deacceleration: 50
+  movementData: {fileID: 11400000, guid: e356a7954f7acd44c8e90dd44e3a8d47, type: 2}
   currentSpeed: 0
   currentForewardDirection: 1
 --- !u!1 &1330145624194535477
