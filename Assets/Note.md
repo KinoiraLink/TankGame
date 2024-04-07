@@ -100,3 +100,20 @@ Tank 游戏对象附加给 Player 游戏对象的事件序列化字段
 游戏对象 TankTurretParent 附加脚本 AimTurret.cs
 
 游戏对象 TankTurret 附加脚本 Turret.cs
+
+
+# Tank Shooting Mechanic in Unity
+
+修改脚本 AimTurret.cs 炮管的旋转修正不再代码种而是面板的调整
+
+游戏对象 TankTurret 新建子对象 Barrel
+
+新建空游戏对象 Bullet ,Sprite Renderer Rigidbody、Box Collider
+
+新建脚本 Bullet.cs 附加给游戏对象，制成预制体
+
+修改脚本 Turret.cs
+
+新建脚本 Damagable.cs 附加给游戏对象 Tank，制成预制体
+
+> 可编程对象 ScriptableObject
