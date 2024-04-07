@@ -117,3 +117,12 @@ Tank 游戏对象附加给 Player 游戏对象的事件序列化字段
 新建脚本 Damagable.cs 附加给游戏对象 Tank，制成预制体
 
 > 可编程对象 ScriptableObject
+
+# Collision Layers in Unity 2D
+
+编写 Layer 
+> 区分 Layer 和 Sort Layer
+
+设置碰撞矩阵
+> 碰撞作用矩阵
+
