@@ -219,3 +219,41 @@ TankPath 新建子对象 Point_1 ...
 新建脚本 AIPatrolPathBehaviour.cs
 
 > Vector2.Dot ()
+
+# Explosion and Muzzle Flash
+
+新建空游戏对象 BackgroundMusic,Audio Source
+
+> Audio Mixer
+
+新建空游戏对象 Explosion,Sprite Renderer、Animator
+
+新建文件夹 Assets/Animations
+
+新建 动画片段、动画控制器
+
+Explosion 添加脚本 DestoryUtil.cs, 使用动画事件
+
+新建脚本 ObjectGeneratorRandomPositionUntil.cs
+
+修改脚本 Bullet.cs
+
+修改预制件 Bullet
+
+新建子对象 ImpactFeedback
+
+> 协程
+
+新建脚本 DestroyOnAduioFinishPlaying.cs
+
+新建脚本 InstantiateUtil.cs
+
+修改预制件 Tank
+
+修改脚本 Turret.cs
+
+新建动画控制器 MuzzleFlashAnimationController
+
+新建动画 MuzzleFlashAnimation
+
+新建脚本 DisableUtil.cs
