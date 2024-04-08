@@ -193,3 +193,16 @@ CTRLD PlayerTankMovmentData BoostTankMovementData
 设置碰撞矩阵
 `Queries Start In Colliders: false`
 > Queries Start In Colliders 射线是否检测自身内部，检测视线能够被遮挡
+
+# AI Static Enemy 
+
+新建脚本 DefaultEnemyAI.cs 附加给游戏对象 StaticEnemy
+
+新建脚本 AIBehaviour.cs
+
+新建脚本 AIPatrolStaticBehaviour.cs
+
+新建脚本 AIShootBehaviour
+
+> 策略模式
+
