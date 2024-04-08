@@ -295,3 +295,21 @@ Explosion 添加脚本 DestoryUtil.cs, 使用动画事件
 Player 新建子对象 附加脚本 UIFollowTank.cs 
 
 新建 Canvas 制作    重新装填 CD 条
+
+# Camera that follow the player
+
+下载 Cinemachine 包
+
+> Cinemachine
+
+新建一个 2D Camera "PlayerCinemachine"
+
+
+新建空游戏对象 CameraConfiner 相机边界
+
+修改脚本 Turret.cs
+
+CameraConfiner 层级设为 Ignore Raycast
+
+
+
