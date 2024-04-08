@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
 
     public void Initialize(BulletData bulletData)
     {
+        this.bulletData = bulletData;
         startPosition = transform.position;
         rb2d.velocity = transform.up * bulletData.speed;
     }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SlowBulletData
   m_EditorClassIdentifier: 
   speed: 3
-  damage: 3
+  damage: 20
   maxDistance: 10

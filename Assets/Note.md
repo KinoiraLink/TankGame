@@ -270,3 +270,18 @@ Explosion 添加脚本 DestoryUtil.cs, 使用动画事件
 
 新建预制件 Big Explosion Variant、ExplosionSound Variant、继续调整坦克预制件
 
+# Adding Track Marks
+
+预制件 Tank TankBase 新建空游戏对象 EngineAudio、TrackMarks 
+
+新建脚本 EngineAudio.cs
+
+修改脚本 TankMove.cs
+
+将 Audio Listener 移到 Tank 上
+
+新建预制件 TrackMarkPrefab
+
+新建脚本 TrackMarksSpawner.cs 附加给游戏对象 TrackMarks
+
+修改脚本 ObjectPool.cs 父物体消失时，池中物体也消失
