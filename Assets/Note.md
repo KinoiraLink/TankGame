@@ -257,3 +257,16 @@ Explosion 添加脚本 DestoryUtil.cs, 使用动画事件
 新建动画 MuzzleFlashAnimation
 
 新建脚本 DisableUtil.cs
+
+# Health Bar above enemy
+
+修改预制件 StaticEnemy 制作血量条
+
+新建脚本 UIFollowTank.cs 附加给游戏对象 canvas
+
+修改预制件 StaticEnemy PatrollingEnemy
+
+修改脚本 AIDetector.cs 修复 Bug
+
+新建预制件 Big Explosion Variant、ExplosionSound Variant、继续调整坦克预制件
+
