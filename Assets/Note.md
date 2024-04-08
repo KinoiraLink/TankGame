@@ -206,3 +206,16 @@ CTRLD PlayerTankMovmentData BoostTankMovementData
 
 > 策略模式
 
+# AI Patrolling enemy 
+
+新建脚本 PatrolPath.cs
+
+CTRLD StaticEnemy PatrollingEnemy 
+
+PatrollingEnemy 新建子对象 TankPath
+
+TankPath 新建子对象 Point_1 ...
+
+新建脚本 AIPatrolPathBehaviour.cs
+
+> Vector2.Dot ()
