@@ -10772,6 +10772,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253881109}
+  - component: {fileID: 1253881112}
+  - component: {fileID: 1253881111}
+  - component: {fileID: 1253881110}
+  - component: {fileID: 1253881113}
   m_Layer: 0
   m_Name: StaticEnemy
   m_TagString: Untagged
@@ -10795,6 +10799,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1253881110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253881108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a29ed8a6d44a39a5bb582a9cb7e92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolDelay: 4
+  randomDirection: {x: 0, y: 0}
+  currentPatrolDelay: 0
+--- !u!114 &1253881111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253881108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bd9195704b4dde9ea279a1eb9d7670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldOfVisionForShooting: 60
+--- !u!114 &1253881112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253881108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f247c761b65fe4a8de78ea2ebdc888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootBehaviour: {fileID: 1253881111}
+  patrolBehaviour: {fileID: 1253881110}
+  tank: {fileID: 1474672843}
+  detector: {fileID: 98438624}
+--- !u!114 &1253881113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253881108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fb4a2fa4570e143bf4d61471fd7ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324767471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11185,7 +11245,7 @@ PrefabInstance:
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1474672844}
+      objectReference: {fileID: 1253881113}
     - target: {fileID: 6470668964165684283, guid: b81b666c54e8dd545801bc007ac69cb6, type: 3}
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
