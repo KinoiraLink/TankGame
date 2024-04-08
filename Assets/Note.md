@@ -285,3 +285,13 @@ Explosion 添加脚本 DestoryUtil.cs, 使用动画事件
 新建脚本 TrackMarksSpawner.cs 附加给游戏对象 TrackMarks
 
 修改脚本 ObjectPool.cs 父物体消失时，池中物体也消失
+
+# Reload cooldown indicator and Health UI 
+
+新建 Canvas 制作血量条 
+
+关联 Tank OnHealthChange
+
+Player 新建子对象 附加脚本 UIFollowTank.cs 
+
+新建 Canvas 制作    重新装填 CD 条
