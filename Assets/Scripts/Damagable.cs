@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Damagable : MonoBehaviour
 {
     public int MaxHealth = 100;
-    [SerializeField] private int health;
+    [SerializeField] private int health = 0;
     
     public UnityEvent OnDead;
     public UnityEvent<float> OnHealthChange;
@@ -26,7 +26,8 @@ public class Damagable : MonoBehaviour
 
     public void Start()
     {
-        Health = MaxHealth;
+        if(health == 0) 
+            Health = MaxHealth;
     }
 
     public void Hit(int damagePoints)

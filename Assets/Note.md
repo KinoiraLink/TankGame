@@ -311,5 +311,30 @@ Player 新建子对象 附加脚本 UIFollowTank.cs
 
 CameraConfiner 层级设为 Ignore Raycast
 
+# Saving data between levels
 
+CTRLD 场景 
 
+SampleScene 改为 Lvl1 、 Lvl2 ... Menu
+
+Menu 场景中清空除相机以外的所有东西 
+
+新建 canvas
+
+新建空游戏对象 SaveSystem 、GameManager
+
+新建脚本 SaveSystem.cs 附加给游戏对象
+
+> 偏好存储
+
+> DontDestroyOnLoad
+
+新建脚本 GameManager.cs 附加给游戏对象
+
+设置场景顺序
+
+Lvl1 场景 新建 Square "Exit"
+
+新建脚本 ExitLevel.cs 附加给游戏对象
+
+设置碰撞矩阵
